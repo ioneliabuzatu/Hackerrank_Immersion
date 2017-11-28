@@ -1,0 +1,14 @@
+n = int(input().strip())
+s = list(input().strip())
+k = int(input().strip())
+
+for i in range(len(s)):
+    if not s[i].isalpha():#copy non alpha carhacters e.g.'-'
+        continue      
+    crypted = ord(s[i])+k #  get unicode string and add k
+    if s[i].islower() and crypted > 122:
+        crypted = 97 + (crypted - 97)%26
+    elif s[i].isupper() and crypted > 90:
+        crypted = 65 + (crypted - 65)%26
+    s[i] = chr(crypted)        
+print(''.join(s))
