@@ -1,0 +1,3 @@
+arr = list(map(int, input().strip().split(' ')))
+print(sum(arr) - max(arr), sum(arr) - min(arr))#obtain min and max by removing the maximum and minimum element within the list
+    
