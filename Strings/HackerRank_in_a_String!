@@ -1,0 +1,15 @@
+
+q = int(input().strip())
+for i in range(q):
+    s = input().strip()
+    find_word='hackerrank'
+    l=0
+    for i in find_word:
+        char=s.find(i)         #compare find_word with s
+        if char>=0:            #get length 
+            s=s[char+1:]
+            l+=1
+    if l==10:
+        print('YES')
+    else:
+        print('NO')
