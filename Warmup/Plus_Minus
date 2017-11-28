@@ -1,0 +1,16 @@
+
+n = int(input().strip())
+arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
+positive=0
+negative=0
+zeros=0
+for i in range(n): #check if i is positive, vegative or it is zero
+    if arr[i]>0:
+        positive+=1
+    elif arr[i]<0:
+        negative+=1    
+    else: 
+        zeros+=1        
+print('%.6f' % float(positive/n))#6 decimals, positive fraction
+print('%.6f' % float(negative/n))#negative fraction
+print('%.6f' % float(zeros/n))  #zero elements fraction 
