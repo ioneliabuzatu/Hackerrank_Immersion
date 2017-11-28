@@ -1,0 +1,7 @@
+#Given a square matrix of size ,n*n, calculate the absolute difference between the sums of its diagonals
+n = int(input())
+difference = 0
+for i in range(n):
+    row = input().split()
+    difference += (int(row[i]) - int(row[n-1-i]))
+print(abs(difference))
