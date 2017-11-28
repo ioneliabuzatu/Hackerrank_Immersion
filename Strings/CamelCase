@@ -1,0 +1,6 @@
+s = input().strip()
+sum_words=1#sum starting from the first word included
+for i in s:
+    if i==i.upper():#find uppercase
+        sum_words+=1
+print(sum_words)        
